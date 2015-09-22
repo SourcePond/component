@@ -28,7 +28,8 @@
 
 	<properties>
 		<!-- Dependency versions -->
-		<pax-cdi-api.version>0.12.0</pax-cdi-api.version>
+		<pax-cdi-api.version>1.0.0.RC1</pax-cdi-api.version>
+		<javax.enterprise.cdi-api>1.2</javax.enterprise.cdi-api>
 		<geronimo-interceptor_1.1_spec.version>1.0</geronimo-interceptor_1.1_spec.version>
 		<geronimo-jcdi_1.0_spec.version>1.0</geronimo-jcdi_1.0_spec.version>
 		<geronimo-validation_1.0_spec.version>1.1</geronimo-validation_1.0_spec.version>
@@ -42,6 +43,12 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
+				<scope>provided</scope>
+				<groupId>javax.enterprise</groupId>
+				<artifactId>cdi-api</artifactId>
+				<version>${javax.enterprise.cdi-api}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.ops4j.pax.cdi</groupId>
 				<artifactId>pax-cdi-api</artifactId>
 				<version>${pax-cdi-api.version}</version>
@@ -51,12 +58,6 @@
 				<groupId>org.apache.geronimo.specs</groupId>
 				<artifactId>geronimo-interceptor_1.1_spec</artifactId>
 				<version>${geronimo-interceptor_1.1_spec.version}</version>
-			</dependency>
-			<dependency>
-				<scope>provided</scope>
-				<groupId>org.apache.geronimo.specs</groupId>
-				<artifactId>geronimo-jcdi_1.0_spec</artifactId>
-				<version>${geronimo-jcdi_1.0_spec.version}</version>
 			</dependency>
 			<dependency>
 				<scope>provided</scope>
