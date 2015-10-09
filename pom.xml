@@ -27,6 +27,9 @@
 	</description>
 
 	<properties>
+		<!-- Plugin versions -->
+		<maven-bundle-plugin.version>2.5.4</maven-bundle-plugin.version>
+
 		<!-- Dependency versions -->
 		<pax-cdi-api.version>1.0.0.RC1</pax-cdi-api.version>
 		<javax.enterprise.cdi-api>1.2</javax.enterprise.cdi-api>
@@ -104,5 +107,18 @@
 			<artifactId>pax-cdi-api</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<extensions>true</extensions>
+					<version>${maven-bundle-plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
 
